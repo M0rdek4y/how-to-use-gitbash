@@ -52,6 +52,7 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 Faça as mudanças que quer adicionar ao commit mais recente, adicione essas mudanças usando <code>git add</code> e então utilize <code>git commit --amend</code>. Como citado na seção anterior, isso vai abrir o editor de texto, possibilitando que também edite a mensagem do commit.</p>
 <p>Caso queira apenas adicionar mais mudanças ao commit, sem editar a mensagem, é possível fazer isso com <code>git commit --amend --no-edit</code>.</p>
 
+=======
 <!-- Inicio de aside -->
     <h2>Dicas finais</h2>
     <h2>Configurar qual editor usar no Git<h2>
