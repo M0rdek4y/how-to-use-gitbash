@@ -55,6 +55,7 @@ Faça as mudanças que quer adicionar ao commit mais recente, adicione essas mud
 ================
 Início de aside
 ================
+
 <h2>Dicas finais</h2>
 <h2>Configurar qual editor usar no Git<h2>
 <p>Por padrão, o git utiliza o editor de texto do padrão do sistema (que em muitos casos é o vi) para editar mensagens de commits. Para utilizar algum outro editor é necessário alterar a configuração core.editor. Por exemplo, executando o seguinte comando:<p>
