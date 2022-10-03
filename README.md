@@ -44,7 +44,7 @@
 
 <p>Caso você queira editar a mensagem do último commit, utilize o comando <code>git commit --amend</code>. Isso vai abrir o seu editor de texto mostrando o último commit e, assim, é possível editar a mensagem.<hr>
 Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:</p>
-<pre><code>git commit --ammend -m "Nova mensagem para o commit"</code><pre>
+<pre><code>git commit --ammend -m "Nova mensagem para o commit"</code></pre>
 
 <h3>Adicionar mais arquivos ao último commit</h3>
 
