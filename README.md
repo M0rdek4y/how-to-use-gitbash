@@ -48,8 +48,8 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 
 <h3>Adicionar mais arquivos ao último commit</h3>
 
-<p>Para isso, também podemos usar o comando <code>git commit --amend</code>.<hr>
-Faça as mudanças que quer adicionar ao commit mais recente, adicione essas mudanças usando <code>git add</code> e então utilize <code>git commit --amend</code>. Como citado na seção anterior, isso vai abrir o editor de texto, possibilitando que também edite a mensagem do commit.</p>
+<p>Para isso, também podemos usar o comando <code>git commit --amend</code>.</p>
+<p>Faça as mudanças que quer adicionar ao commit mais recente, adicione essas mudanças usando <code>git add</code> e então utilize <code>git commit --amend</code>. Como citado na seção anterior, isso vai abrir o editor de texto, possibilitando que também edite a mensagem do commit.</p>
 <p>Caso queira apenas adicionar mais mudanças ao commit, sem editar a mensagem, é possível fazer isso com <code>git commit --amend --no-edit</code>.</p>
 
 
