@@ -61,7 +61,7 @@ Início de aside
     <pre><code>git config --global core.editor atom</code></pre>
     <p>O Git agora vai utilizar o Atom como editor padrão. Isso vale para mensagens de commit e para outras operações do Git, como rebase interativo.</p>
 ======= 
-Início de aside
+Final de aside
 =======
 
 <p>FIM!</p>
