@@ -17,9 +17,9 @@
 
 <h3>Configurar qual editor usar no Git<h3>
 
-<p>Por padrão, o git utiliza o editor de texto do padrão do sistema (que em muitos casos é o vi) para editar mensagens de commits. Para utilizar algum outro editor é necessário alterar a configuração core.editor. Por exemplo, executando o seguinte comando:<br>
+<p>Por padrão, o git utiliza o editor de texto do padrão do sistema (que em muitos casos é o vi) para editar mensagens de commits. Para utilizar algum outro editor é necessário alterar a configuração core.editor. Por exemplo, executando o seguinte comando:</p>
 <pre><code>git config --global core.editor atom</code></pre>
-<br>O Git agora vai utilizar o Atom como editor padrão. Isso vale para mensagens de commit e para outras operações do Git, como rebase interativo.</p>
+<p>O Git agora vai utilizar o Atom como editor padrão. Isso vale para mensagens de commit e para outras operações do Git, como rebase interativo.</p>
 
 ## Agora podemos  começar a utilizar o git. A primeira coisa a se fazer caso você não possua um repositório é criar um.
 
