@@ -13,7 +13,7 @@
 <pre><code>git config --global user.email "seuemail@gmail.com"</code></pre>
 
 <p>Configure o seu nome de usuário de acordo do seu git</p>
-<pre><code>git config --global user.name "seunome"</code><pre>
+<pre><code>git config --global user.name "seunome"</code></pre>
 
 <h3>Configurar qual editor usar no Git<h3>
 
@@ -91,7 +91,7 @@
 
 <h4>Editar mensagem do último commit<h4>
 
-<p>Caso você queira editar a mensagem do último commit, utilize o comando <code>git commit --amend</code>. Isso vai abrir o seu editor de texto mostrando o último commit e, assim, é possível editar a mensagem.<hr>
+<p>Caso você queira editar a mensagem do último commit, utilize o comando <code>git commit --amend</code>.<br>Isso vai abrir o seu editor de texto mostrando o último commit e, assim, é possível editar a mensagem.<hr>
 Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:</p>
 <pre><code>git commit --ammend -m "Nova mensagem para o commit"</code></pre>
 
@@ -106,7 +106,7 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 <h4>Adicionar mais arquivos ao último commit</h4>
 
 <p>Para isso, também podemos usar o comando <code>git commit --amend</code>.</p>
-<p>Faça as mudanças que quer adicionar ao commit mais recente, adicione essas mudanças usando <code>git add</code> e então utilize <code>git commit --amend</code>. Como citado na seção anterior, isso vai abrir o editor de texto, possibilitando que também edite a mensagem do commit.</p>
+<p>Faça as mudanças que quer adicionar ao commit mais recente, adicione essas mudanças usando <code>git add</code><br>e então utilize <code>git commit --amend</code>.<br>Como citado na seção anterior, isso vai abrir o editor de texto, possibilitando que também edite a mensagem do commit.</p>
 <p>Caso queira apenas adicionar mais mudanças ao commit, sem editar a mensagem, é possível fazer isso com</p>
 <pre><code>git commit --amend --no-edit</code></pre>
 
@@ -116,16 +116,16 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 
 <p>O comando</p>
 <pre><code>git pull</code></pre>
-<p>é usado para mesclar o repositório remoto com o repositório local e atualizar o ramo(branch) atual com as alterações remotas.Ele combina os comandos <code>git fetch</code> e <code>git merge</code>.</p>
+<p>é usado para mesclar o repositório remoto com o repositório local e atualizar o ramo(branch) atual com as alterações remotas.<br>Ele combina os comandos <code>git fetch</code> e <code>git merge</code>.</p>
 
 <h2>Download & Integração com <code>pull</code> do git</h2>
 
 <p>Utilizando o comando</p>
 <pre><code>git pull origin master</code></pre>
-<p>podemos atualizar o repositório local com as últimas alterações do repositório remoto, especificamente da branch "master" do repositório "origin". Ele realiza dois passos em sequência: primeiro, faz um git fetch para buscar as atualizações mais recentes do repositório remoto, e depois faz um git merge para aplicar essas atualizações no branch atual do repositório local. Isso garante que o repositório local esteja atualizado com as alterações mais recentes do repositório remoto.</p>
+<p>podemos atualizar o repositório local com as últimas alterações do repositório remoto, especificamente da branch "master" do repositório "origin".<br> Ele realiza dois passos em sequência: primeiro, faz um git fetch para buscar as atualizações mais recentes do repositório remoto, e depois faz um git merge para aplicar essas atualizações no branch atual do repositório local.<br> Isso garante que o repositório local esteja atualizado com as alterações mais recentes do repositório remoto.</p>
 <p>mas também podemos utilizar o comando</p>
 <pre><code>git pull origin master --rebase</code></pre>
-<p>assim realizando um rebase das alterações trazidas do repositório remoto com a branch local, reescrevendo o histórico de commits da branch local para que as alterações mais recentes do repositório remoto fiquem em primeiro lugar. Isso pode evitar a criação de um novo commit de merge e manter um histórico de commits mais linear e limpo.</p>
+<p>assim realizando um rebase das alterações trazidas do repositório remoto com a branch local, reescrevendo o histórico de commits da branch local para que as alterações<br> mais recentes do repositório remoto fiquem em primeiro lugar. Isso pode evitar a criação de um novo commit de merge e manter um histórico de commits mais linear e limpo.</p>
 
 ## Enviando arquivos do repositório local para o repositório remoto
 
@@ -138,7 +138,7 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 <p>Já o comando</p>
 <pre><code>git push origin master</code></pre>
 <p>envia as alterações da branch local <code>master</code> para a branch <code>master</code> no repositório remoto <code>origin</code>. Esse comando é útil quando você deseja enviar suas alterações para a branch <code>master</code> do repositório remoto.</p>
-<p>É importante ressaltar que, para usar o comando <code>git push</code>, você precisa ter permissão de escrita no repositório remoto correspondente. Além disso, é recomendado verificar se o repositório remoto está atualizado antes de enviar suas alterações, para evitar conflitos com outras alterações que possam ter sido feitas no repositório remoto desde a última vez que você o atualizou localmente.</p>
+<p>É importante ressaltar que, para usar o comando <code>git push</code>, você precisa ter permissão de escrita no repositório remoto correspondente.<br>Além disso, é recomendado verificar se o repositório remoto está atualizado antes de enviar suas alterações, para evitar conflitos com outras alterações que possam ter sido feitas no repositório remoto desde a última vez que você o atualizou localmente.</p>
 
 ### EXTRA
 
@@ -146,7 +146,7 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 
 <p>O comando</p>
 <pre><code>git fetch</code></pre>
-<p>é usado para buscar as atualizações mais recentes dos branches e tags de um repositório remoto, mas não mescla as alterações em seus arquivos locais. Ele apenas atualiza as referências locais para os branches e tags remotos. Resumindo, o git fetch busca atualizações de todos os repositórios remotos configurados.</p>
+<p>é usado para buscar as atualizações mais recentes dos branches e tags de um repositório remoto,<br>mas não mescla as alterações em seus arquivos locais. Ele apenas atualiza as referências locais para os branches e tags remotos. Resumindo,<br>o git fetch busca atualizações de todos os repositórios remotos configurados.</p>
 <p>por outro lado</p>
 <pre><code>git merge</code></pre>
 <p>é usado para mesclar mudanças de uma branch para outra. Quando você executa git merge, o Git mescla as mudanças da branch atual com a branch especificada.</p>
@@ -160,4 +160,4 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 <p>é usado para remover diretórios e seus conteúdos recursivamente, enquanto o comando rm <code>-rf</code> é usado para forçar a remoção de diretórios e seus conteúdos recursivamente, sem fazer perguntas.</p>
 <p>A opção <code>-f</code> em</p> 
 <pre><code>rm -rf</code></pre> 
-<p>significa "forçar", o que significa que o comando não solicitará confirmação antes de remover os arquivos ou diretórios. Portanto, é importante ter cuidado ao usar o comando rm <code>-rf</code>, pois ele pode apagar permanentemente arquivos importantes sem a possibilidade de recuperação.</p>
+<p>significa "forçar", o que significa que o comando não solicitará confirmação antes de remover os arquivos ou diretórios.<br>Portanto, é importante ter cuidado ao usar o comando rm <code>-rf</code>,pois ele pode apagar permanentemente arquivos importantes sem a possibilidade de recuperação.</p>
