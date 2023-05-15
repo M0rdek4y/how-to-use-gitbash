@@ -15,7 +15,7 @@
 <p>Configure o seu nome de usuário de acordo do seu git</p>
 <pre><code>git config --global user.name "seunome"</code></pre>
 
-<h2>Configurar qual editor usar no Git<h2>
+<h4>Configurar qual editor usar no Git<h4>
 
 <p>Por padrão, o git utiliza o editor de texto do padrão do sistema (que em muitos casos é o vi) para editar mensagens de commits. Para utilizar algum outro editor é necessário alterar a configuração core.editor. Por exemplo, executando o seguinte comando:</p>
 <pre><code>git config --global core.editor atom</code></pre>
