@@ -2,7 +2,19 @@
 
 <h2>Fluxo de trabalho</h2>
 
-<p>seus repositórios locais consistem em três "árvores" mantidas pelo git. a primeira delas é sua <code>Working Directory</code>que contém os arquivos vigentes. a segunda <code>Index</code> que funciona como uma área temporária e finalmente a <code>HEAD</code> que aponta para o último commit (confirmação) que você fez.</p>
+<p>Seus repositórios locais consistem em três "árvores" mantidas pelo git. a primeira delas é sua <code>Working Directory</code>que contém os arquivos vigentes. a segunda <code>Index</code> que funciona como uma área temporária e finalmente a <code>HEAD</code> que aponta para o último commit (confirmação) que você fez.</p>
+
+## Após a instalação do git
+
+<h2>Configurando o git</h2>
+
+<p>Configure o seu email de acordo com o seu git</p>
+<pre><code>git config --global user.email "seuemail@gmail.com"</code></pre>
+
+<p>Configure o seu nome de usuário de acordo do seu git</p>
+<pre><code>git config --global user.name "seunome"</code><pre>
+
+## Agora podemos  começar a utilizar o git. A primeira coisa a se fazer caso você não possua um repositório é criar um.
 
 <h3>Criando um novo repositório</h3>
 
@@ -10,13 +22,38 @@
 <pre><code>git init</code></pre>
 <p>para criar um novo repositório.</p>
 
+## Agora que você criou seu repositório e adicionou seus arquivos devemos subir o arquivo para seu para a área de preparação "staging area".
 
-<h3>Obtenha um repositório</h3>
+<h3>Adicionando os arquivos para a staging area</h3>
 
-<p>crie uma cópia de trabalho em um repositório local executando o comando</p>
+<p>Utilize</p>
+<pre><code>git add &lt;"nome-do-arquivo"&gt;</code></pre>
+<p>ou adicione todos os arquivos com</p>
+<pre><code>git add .</code></pre>
+<p>Dessa forma os arquivos ja estarão na staging area.
+
+## Caso você tenha enviado um arquivo para a staging area por engano pode retiralo
+
+<h3>Removendo os arquivos para a staging area</h3>
+
+<p>Utilize</p>
+<pre><code>git reset &lt;"nome-do-arquivo"&gt;</code></pre>
+<p>ou remova todos os arquivos com</p>
+<pre><code>git reset .</code></pre>
+<p>Dessa forma os arquivos já estarão removidos da staging area.
+
+## Agora podemos que os arquivos estão na staging area, podemos confirmar que realmente que forma adicionados fazendo o commit.
+
+<p>Para fazer o commit basta utilizar o comando a seguir</p>
+<pre><code>git commit -m "comentários das alterações"</code></pre>
+<p>e caso deseje alterar o commit basta </p>
+
+<h3>Clonando um repositório</h3>
+
+<p>Crie uma cópia de trabalho em um repositório local executando o comando</p>
 <pre><code>git clone /caminho/para/o/repositório</code></pre>
 <p>quando usar um servidor remoto, seu comando será</p>
-<pre><code>git clone usuário@servidor:/caminho/para/o/repositório</code></pre>
+<pre><code>git clone https:/caminho/para/o/repositório</code></pre>
 
 <h3>Adicionar & confirmar</h3>
 
