@@ -44,9 +44,14 @@
 
 ## Agora podemos que os arquivos estão na staging area, podemos confirmar que realmente que forma adicionados fazendo o commit.
 
-<p>Para fazer o commit basta utilizar o comando a seguir</p>
+<p>Para fazer o commit basta utilizar o comando:</p>
 <pre><code>git commit -m "comentários das alterações"</code></pre>
-<p>e caso deseje alterar o commit basta </p>
+<p>e caso deseje alterar o commit basta utilizar o comando:</p>
+<pre><code>git commit --amend</code></pre>
+<p>caso tenha ja tenha feito o commit e deseja remove-lo, basta utilizar</p>
+<pre><code>git reset HEAD~</code></pre>
+<p>dessa forma o arquivo irá retornar para a staging área e o commit será desfeito</p>
+
 
 <h3>Clonando um repositório</h3>
 
