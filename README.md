@@ -132,13 +132,15 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 <h2>Upload com push</h2>
 
 <h3>Após fazer o commit dos arquivos, eles estarão na staging area, e para enviar os arquivos para o repositório remoto basta usar o comando</h3>
-<pre><code>git push</code></pre>
-<p>para enviar as alterações locais para um repositório remoto. Quando usado sem argumentos adicionais, ele envia as alterações da branch atual para a branch correspondente no repositório remoto.</p>
-<p>Por exemplo, se você está atualmente na branch <code>feature</code> e deseja enviar suas alterações para a branch <code>feature</code> no repositório remoto chamado <code>origin</code>, você pode executar o comando <code>git push origin feature</code>.</p>
-<p>Já o comando</p>
 <pre><code>git push origin master</code></pre>
 <p>envia as alterações da branch local <code>master</code> para a branch <code>master</code> no repositório remoto <code>origin</code>. Esse comando é útil quando você deseja enviar suas alterações para a branch <code>master</code> do repositório remoto.</p>
 <p>É importante ressaltar que, para usar o comando <code>git push</code>, você precisa ter permissão de escrita no repositório remoto correspondente.<br>Além disso, é recomendado verificar se o repositório remoto está atualizado antes de enviar suas alterações, para evitar conflitos com outras alterações que possam ter sido feitas no repositório remoto desde a última vez que você o atualizou localmente.</p>
+<p>Agora se não deseja ficar utilizando o <code>git push origin master</code> e quer usar comando simples <code>git push</code> basta utilizar o comando</p>
+<pre><code> git push --set-upstream origin master</code></pre>
+<p>com isso o git irá sincronizar a branch local com a branch do repositório e dessa forma das proximas vezes que for utilizar o comando, basta utlizar o <code>git push</code>
+<pre><code>git push</code></pre>
+<p>para enviar as alterações locais para um repositório remoto. Quando usado sem argumentos adicionais, ele envia as alterações da branch atual para a branch correspondente no repositório remoto.</p>
+<p>Por exemplo, se você está atualmente na branch <code>feature</code> e deseja enviar suas alterações para a branch <code>feature</code> no repositório remoto chamado <code>origin</code>, você pode executar o comando <code>git push origin feature</code>.</p>
 
 ### EXTRA
 
