@@ -60,6 +60,15 @@
 <p>e caso queira excluir todos use</p>
 <pre><code>rm -r .</code></pre>
 
+## Após atualizações do GITHUB estão ocorrendo implementações e alterações na branch que comumente era master e está sendo alterada para main.
+
+<h2>Alterando a branch de master para main</h2>
+<p>Utilize</p>
+<pre><code>git checkout -b main</code></pre>
+<pre><code>a utilização do parametro "-b" verifica se a branch existe e caso não exista ela cria e depois faz a troca</code></pre>
+<p>Dessa forma alteramos a branch de master para main<p\>
+
+
 ## Agora que você criou seu repositório e adicionou seus arquivos devemos subir o arquivo para seu para a área de preparação "staging area".
 
 <h2>Adicionando os arquivos para o index</h2>
@@ -68,7 +77,7 @@
 <pre><code>git add "nome-do-arquivo"</code></pre>
 <p>ou adicione todos os arquivos com</p>
 <pre><code>git add .</code></pre>
-<p>Dessa forma os arquivos ja estarão no index.
+<p>Dessa forma os arquivos ja estarão no index.<p\+>
 
 ## Caso você tenha enviado um arquivo para a index por engano pode retiralo
 
