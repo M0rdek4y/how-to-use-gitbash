@@ -60,15 +60,41 @@
 <p>e caso queira excluir todos use</p>
 <pre><code>rm -r .</code></pre>
 
+## Após atualizações do GITHUB estão ocorrendo implementações e alterações na branch que comumente era master e está sendo alterada para main.
+
+<h2>Alterando a branch de master para main</h2>
+<p>Utilize o comando</p>
+<pre><code>git checkout "nome_da_branch"</code></pre>
+<p>Dessa forma você troca para uma nova branch</p>
+<p>Caso não tenha uma nova branch, você pode utilizar o comando</p>
+<pre><code>git checkout -b "nome da nova branch"</code></pre>
+<p>a utilização do parametro "-b" verifica se a branch existe e caso não exista ela cria e depois faz a troca para a nova branch</p>
+<p>Dessa forma alteramos a branch de master para main</p>
+<p>Caso queira apenas criar uma nova branch pode utilizar do comando:<p>
+<pre><code>git branch "nome_da_branch"</code></pre>
+<p>Caso queira excluir uma branch do remoto utilize de:</p>
+<pre><code>git push origin :"nome_da_branch"</code></pre>
+<p>Caso queira ver se a branch está no repositório local, ou na sua maquina local use:<p>
+<pre><code>git branch</code></pre>
+<p>Caso queira ver se a branch está no repositório remoto, ou na sua maquina remoto:</p>
+<pre><code>git branch -a</code></pre>
+
+## Devemos utilizar o fetch
+
+<h2>utilizando o fetch</h2>
+<p>Utilize o comando</p>
+<pre><code>git fetch --prune --all</code></pre>
+<p>Os parâmetros utlizados servem para atualizar o repositório remoto para o local, retire os branchs apagados e outros dados inválidos</p>
+
 ## Agora que você criou seu repositório e adicionou seus arquivos devemos subir o arquivo para seu para a área de preparação "staging area".
 
 <h2>Adicionando os arquivos para o index</h2>
 
 <p>Utilize</p>
-<pre><code>git add "nome-do-arquivo"</code></pre>
+<pre><code>git add "nome-do-arquivo"</code></pre>+
 <p>ou adicione todos os arquivos com</p>
 <pre><code>git add .</code></pre>
-<p>Dessa forma os arquivos ja estarão no index.
+<p>Dessa forma os arquivos ja estarão no index.</p>
 
 ## Caso você tenha enviado um arquivo para a index por engano pode retiralo
 
