@@ -63,10 +63,13 @@
 ## Após atualizações do GITHUB estão ocorrendo implementações e alterações na branch que comumente era master e está sendo alterada para main.
 
 <h2>Alterando a branch de master para main</h2>
-<p>Utilize</p>
-<pre><code>git checkout -b main</code></pre>
-<pre><code>a utilização do parametro "-b" verifica se a branch existe e caso não exista ela cria e depois faz a troca</code></pre>
-<p>Dessa forma alteramos a branch de master para main<p\>
+<p>Utilize o comando</p>
+<pre><code>git checkout "nome_da_branch"</code></pre>
+<p>Dessa forma você troca para uma nova branch</p>
+<p>Caso não tenha uma nova branch, você pode utilizar o comando</p>
+<pre><code>git checkout -b "nome da nova branch"</code></pre>
+<p>a utilização do parametro "-b" verifica se a branch existe e caso não exista ela cria e depois faz a troca para a nova branch</p>
+<p>Dessa forma alteramos a branch de master para main</p>
 
 
 ## Agora que você criou seu repositório e adicionou seus arquivos devemos subir o arquivo para seu para a área de preparação "staging area".
@@ -74,10 +77,10 @@
 <h2>Adicionando os arquivos para o index</h2>
 
 <p>Utilize</p>
-<pre><code>git add "nome-do-arquivo"</code></pre>
+<pre><code>git add "nome-do-arquivo"</code></pre>+
 <p>ou adicione todos os arquivos com</p>
 <pre><code>git add .</code></pre>
-<p>Dessa forma os arquivos ja estarão no index.<p\+>
+<p>Dessa forma os arquivos ja estarão no index.</p>
 
 ## Caso você tenha enviado um arquivo para a index por engano pode retiralo
 
