@@ -72,7 +72,6 @@
 <p>Dessa forma alteramos a branch de master para main</p>
 <p>Caso queira apenas criar uma nova branch pode utilizar do comando:<p>
 <pre><code>git branch "nome_da_branch"</code></pre>
-
 <p>Caso queira excluir uma branch do repositório (maquina virtual) remoto utilize de:</p>
 <pre><code>git push origin :"nome_da_branch"</code></pre>
 <p>Mas também pode ser utilizado o comando abaixo:</p>
@@ -81,7 +80,7 @@
 <pre><code>git branch :"nome_da_branch"</code></pre>
 <p>Mas também pode ser utilizado o comando abaixo:</p>
 <pre><code>git branch -d "nome_da_branch"</code></pre>
-<p>Caso queira ver se a branch está no repositório local, ou na sua maquina local use:<p>
+<p>Caso queira ver se a branch está no repositório local, ou na sua maquina local use:</p>
 <pre><code>git branch</code></pre>
 <p>Caso queira ver se a branch está no repositório remoto, ou na sua maquina remoto:</p>
 <pre><code>git branch -a</code></pre>
