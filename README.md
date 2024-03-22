@@ -52,6 +52,9 @@ Dessa forma o controle remoto com a URL especificada e definirá automaticamente
 <p>caso os comando ainda não funcionem e não deseja utilizar um comando de upstream pode tentar utilizaro seguinte comando:</p>
 <pre><code>git push -u origin main</code></pre>
 <p>Dessa forma o upstream é definido altomaticamente e de forma simplificada</p>
+<p>Devemos nos lembrar que em repositórios já existêntes, sua criação ja está vinculada com o master por padrão, e caso ocorra de você ter excluido a branch e também não possa fazer um merge, podemos retirar essa limitação com o seguinte comando:</p>
+<pre><code>git branch --unset-upstream</code></pre>
+<p>dessa forma conseguimos desvincular qualquer branch vinculada ao upstream</p>
 
 
 <h2>Clonando um repositório</h2>
