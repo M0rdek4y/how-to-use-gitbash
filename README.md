@@ -36,9 +36,19 @@
 <p>Podemos utilizar o</p>
 <pre><code>git remote add origin</code></pre>
 <p>O comando git remote add origin é usado para adicionar um repositório remoto existente como uma referência no seu repositório local. Isso permite que você se conecte e interaja com o repositório remoto usando comandos como git push e git pull. Em resumo é usado para adicionar um repositório remoto como um ponto de referência no seu repositório local.</p>
+<p>Lembrando que ao utilizar o comando:</p>
+<pre><code>git remote add origin</code></pre>
+<p>futuramente pode ser que tenha problemas com o controle remoto com a URL especificada que não encontrará o branch local main ao tentar rastrear o branch remoto main. Assim, quando você fizer git pull ou git push no branch local main, o Git não saberá automaticamente para onde buscar e enviar as alterações. caso isso aconteça poderá facilmente corrigir utilizando:</p>
+<pre><code>git branch --set-upstream-to=origin/"branch" "branch"</code></pre>
+<p>assim o Git saberá automaticamente para onde buscar e enviar as alterações.
+caso durante a criação do repositório local queira evitar esse problema, bastar utilizar o comando:</p>
+<pre><code>git remote add origin -t main</code></pre>
+<p>Quando você utiliza o parâmetro -t main ou --track main, você está especificando que o branch local que você está criando (nesse caso, main) deve rastrear o branch remoto de mesmo nome (main). Isso significa que o Git configurará automaticamente a relação de rastreamento entre os dois branches. Quando você fizer git pull ou git push sem especificar um branch, o Git saberá para onde buscar e enviar as alterações com base na configuração de rastreamento.
+Essencialmente, o uso do -t ou --track economiza tempo, evitando que você precise definir manualmente o rastreamento entre branches após adicionar o controle remoto.
+Dessa forma o controle remoto com a URL especificada e definirá automaticamente o branch local main para rastrear o branch remoto main. Assim, quando você fizer git pull ou git push no branch local main, o Git saberá automaticamente para onde buscar e enviar as alterações.</p>
 <p> Após criar o ponto de refência pode trazer os arquivos do repositório remoto, basta usar</p>
-<pre><code>git pull origin master</code></pre>
-<p>assim você está puxando o ramo(branch) master do repositório remoto origin e mesclando com o seu ramo(branch).</p>
+<pre><code>git pull origin main</code></pre>
+<p>assim você está puxando o ramo(branch) main do repositório remoto origin e mesclando com o seu ramo(branch).</p>
 
 
 <h2>Clonando um repositório</h2>
@@ -60,16 +70,16 @@
 <p>e caso queira excluir todos use</p>
 <pre><code>rm -r .</code></pre>
 
-## Após atualizações do GITHUB estão ocorrendo implementações e alterações na branch que comumente era master e está sendo alterada para main.
+## Após atualizações do GITHUB estão ocorrendo implementações e alterações na branch que comumente era main e está sendo alterada para main.
 
-<h2>Alterando a branch de master para main</h2>
+<h2>Alterando a branch de main para main</h2>
 <p>Utilize o comando</p>
 <pre><code>git checkout "nome_da_branch"</code></pre>
 <p>Dessa forma você troca para uma nova branch</p>
 <p>Caso não tenha uma nova branch, você pode utilizar o comando</p>
 <pre><code>git checkout -b "nome da nova branch"</code></pre>
 <p>a utilização do parametro "-b" verifica se a branch existe e caso não exista ela cria e depois faz a troca para a nova branch</p>
-<p>Dessa forma alteramos a branch de master para main</p>
+<p>Dessa forma alteramos a branch de main para main</p>
 <p>Caso queira apenas criar uma nova branch pode utilizar do comando:<p>
 <pre><code>git branch "nome_da_branch"</code></pre>
 <p>Caso queira excluir uma branch do repositório (maquina virtual) remoto utilize de:</p>
@@ -153,10 +163,10 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 <h2>Download & Integração com <code>pull</code> do git</h2>
 
 <p>Utilizando o comando</p>
-<pre><code>git pull origin master</code></pre>
-<p>podemos atualizar o repositório local com as últimas alterações do repositório remoto, especificamente da branch "master" do repositório "origin".<br> Ele realiza dois passos em sequência: primeiro, faz um git fetch para buscar as atualizações mais recentes do repositório remoto, e depois faz um git merge para aplicar essas atualizações no branch atual do repositório local.<br> Isso garante que o repositório local esteja atualizado com as alterações mais recentes do repositório remoto.</p>
+<pre><code>git pull origin main</code></pre>
+<p>podemos atualizar o repositório local com as últimas alterações do repositório remoto, especificamente da branch "main" do repositório "origin".<br> Ele realiza dois passos em sequência: primeiro, faz um git fetch para buscar as atualizações mais recentes do repositório remoto, e depois faz um git merge para aplicar essas atualizações no branch atual do repositório local.<br> Isso garante que o repositório local esteja atualizado com as alterações mais recentes do repositório remoto.</p>
 <p>mas também podemos utilizar o comando</p>
-<pre><code>git pull origin master --rebase</code></pre>
+<pre><code>git pull origin main --rebase</code></pre>
 <p>assim realizando um rebase das alterações trazidas do repositório remoto com a branch local, reescrevendo o histórico de commits da branch local para que as alterações<br> mais recentes do repositório remoto fiquem em primeiro lugar. Isso pode evitar a criação de um novo commit de merge e manter um histórico de commits mais linear e limpo.</p>
 
 ## Enviando arquivos do repositório local para o repositório remoto
@@ -164,11 +174,11 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 <h2>Upload com push</h2>
 
 <h3>Após fazer o commit dos arquivos, eles estarão na staging area, e para enviar os arquivos para o repositório remoto basta usar o comando</h3>
-<pre><code>git push origin master</code></pre>
-<p>envia as alterações da branch local <code>master</code> para a branch <code>master</code> no repositório remoto <code>origin</code>. Esse comando é útil quando você deseja enviar suas alterações para a branch <code>master</code> do repositório remoto.</p>
+<pre><code>git push origin main</code></pre>
+<p>envia as alterações da branch local <code>main</code> para a branch <code>main</code> no repositório remoto <code>origin</code>. Esse comando é útil quando você deseja enviar suas alterações para a branch <code>main</code> do repositório remoto.</p>
 <p>É importante ressaltar que, para usar o comando <code>git push</code>, você precisa ter permissão de escrita no repositório remoto correspondente.<br>Além disso, é recomendado verificar se o repositório remoto está atualizado antes de enviar suas alterações, para evitar conflitos com outras alterações que possam ter sido feitas no repositório remoto desde a última vez que você o atualizou localmente.</p>
-<p>Agora se não deseja ficar utilizando o <code>git push origin master</code> e quer usar comando simples <code>git push</code> basta utilizar o comando</p>
-<pre><code> git push --set-upstream origin master</code></pre>
+<p>Agora se não deseja ficar utilizando o <code>git push origin main</code> e quer usar comando simples <code>git push</code> basta utilizar o comando</p>
+<pre><code> git push --set-upstream origin main</code></pre>
 <p>com isso o git irá sincronizar a branch local com a branch do repositório e dessa forma das proximas vezes que for utilizar o comando, basta utlizar o <code>git push</code>
 <pre><code>git push</code></pre>
 <p>para enviar as alterações locais para um repositório remoto. Quando usado sem argumentos adicionais, ele envia as alterações da branch atual para a branch correspondente no repositório remoto.</p>
