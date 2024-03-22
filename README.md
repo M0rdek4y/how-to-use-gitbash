@@ -50,8 +50,8 @@ Dessa forma o controle remoto com a URL especificada e definirá automaticamente
 <pre><code>git pull origin main</code></pre>
 <p>assim você está puxando o ramo(branch) main do repositório remoto origin e mesclando com o seu ramo(branch).</p>
 <p>caso os comando ainda não funcionem e não deseja utilizar um comando de upstream pode tentar utilizaro seguinte comando:</p>
-<p>git push -u origin main</p>
-<pre><code>Dessa forma o upstream é definido altomaticamente e de forma simplificada</code></pre>
+<pre><code>git push -u origin main</code></pre>
+<p>Dessa forma o upstream é definido altomaticamente e de forma simplificada</p>
 
 
 <h2>Clonando um repositório</h2>
