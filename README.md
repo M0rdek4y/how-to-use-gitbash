@@ -211,3 +211,12 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 <p>A opção <code>-f</code> em</p> 
 <pre><code>rm -rf</code></pre> 
 <p>significa "forçar", o que significa que o comando não solicitará confirmação antes de remover os arquivos ou diretórios.<br>Portanto, é importante ter cuidado ao usar o comando rm <code>-rf</code>,pois ele pode apagar permanentemente arquivos importantes sem a possibilidade de recuperação.</p>
+
+<h2>Gerenciando arquivos grandes</h2>
+
+<p>Se você estiver usando o Windows e o Git estiver configurado para não aceitar caminhos longos, voce pode enfrentar problemas como </p>
+<code>error: could not lock config file C:/Program Files/Git/etc/gitconfig: Permission denied</code>
+<p> ao tentar manipular os arquivos, como fazer um <code>git pull</code> para baixar as alterações de um repositório ou um <code>git clone</code> para clonar um repositório seu sistema e os ao ser baixado ele vem sem os arquivos grandes, ou até mesmo quando você der um <code>git push</code> para enviar os arquivos para o repositório, e você ter erros ou até mesmo os arquivos irem para o repositório porém os arquivos grandes não serem adicionados ao repositório</p>
+<p>e para resolver isso  podemos abrir o <a href="https://git-scm.com/downloads">Git</a> com permissões de adminstrador e utilizar o comando:</p>
+<pre><code>git config --system core.longpaths true</code></pre>
+<p>dessa forma você habilitar o suporte a caminhos longos, dessa forma você permite que o Git manipule caminhos longos.</p>
