@@ -219,4 +219,4 @@ Se não for necessário editar o corpo da mensagem, isso pode ser feito usando:<
 <p> ao tentar manipular os arquivos, como fazer um <code>git pull</code> para baixar as alterações de um repositório ou um <code>git clone</code> para clonar um repositório seu sistema e os ao ser baixado ele vem sem os arquivos grandes, ou até mesmo quando você der um <code>git push</code> para enviar os arquivos para o repositório, e você ter erros ou até mesmo os arquivos irem para o repositório porém os arquivos grandes não serem adicionados ao repositório</p>
 <p>e para resolver isso  podemos abrir o <a href="https://git-scm.com/downloads">Git</a> com permissões de adminstrador e utilizar o comando:</p>
 <pre><code>git config --system core.longpaths true</code></pre>
-<p>dessa forma você habilitar o suporte a caminhos longos, dessa forma você permite que o Git manipule caminhos longos.</p>
+<p>dessa forma você habilita o suporte a caminhos longos, e permite que o Git manipule caminhos longos.</p>
