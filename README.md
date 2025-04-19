@@ -56,6 +56,26 @@ Dessa forma o controle remoto com a URL especificada e definirá automaticamente
 <pre><code>git branch --unset-upstream</code></pre>
 <p>dessa forma conseguimos desvincular qualquer branch vinculada ao upstream</p>
 
+<p>Caso não funcione o pull e o push você pode tentar:</p>
+<p>Adicione a origem remota ao repositório local (pule esta etapa caso ja tenha adicionado a origem remota no seu repositório local)</p>
+<pre><code>git remote add origin https://github.com/seuusuario/seurepositorio.git</code></pre>
+<p>use o</p>
+<pre><code>git pull --set-upstream origin main</code></pre>
+<p>para fazer o pull ja redirecionando pull para que nas proximas vezes possa usar somente o <code>git pull</code> adicione os arquivos que você deseja e após isso faça o commit normalmente
+agora para fazer o <code>git push</code> provavelmente vai dar erro pois o Git detecta que os históricos da sua branch local e da remota não têm nada em comum ou seja as linhas do tempo de
+commits do projeto local e remoto estão diferentes e para resolver isso pode fazer da seguinte maneira, se o projeto é novo apenas use o: </p>
+<pre><code>git push origin main --force</code></pre>
+<p>Dessa forma você irá sobrescrever o repositório remoto com o que está local e o problema estará resolvido caso o repositório seja mais antigo e ja o utlize a algum tempo, uma das maneira de solucionar é
+Se você quer mesmo unir os dois históricos (ou só precisa puxar o que está no remoto), use a flag --allow-unrelated-histories:
+unir os dois históricos (ou só precisa puxar o que está no remoto), use a flag <code>--allow-unrelated-histories</code></p>
+<pre><code>git pull origin nome-da-branch --allow-unrelated-histories</code></pre>
+<p>Exemplo comum:</p>
+<pre><code>git pull origin main --allow-unrelated-histories</code></pre>
+<p>Depois disso, resolva possíveis conflitos se houver, faça commit, e então você poderá dar <code>git push</code> normalmente com:</p>
+<pre><code>git push origin main</code></pre>
+<p>ou</p>
+<pre><code>git push -u origin main</code></pre>
+
 
 <h2>Clonando um repositório</h2>
 
